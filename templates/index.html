@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>Automation in Ticketing system</title>
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #333333;
+        font-size: 36px;
+        margin-top: 50px;
+        text-align: center;
+      }
+      form {
+        margin-top: 50px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        font-size: 24px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ticketing Classification App</h1>
+    <form method="POST" action="{{ url_for('predict') }}">
+      <label for="complaint_what_happened">Enter the customer complaint:</label>
+      <input type="text" id="complaint" name="complaint" required>
+      <br>
+      <input type="submit" value="Predict Category">
+      <p>{ prediction }</p>
+    </form>
+  </body>
+</html>
